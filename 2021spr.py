@@ -141,3 +141,30 @@ for i in books:
 
 conn.commit()
 conn.close()
+
+#quiz-2
+x=1
+while x<10:
+    y=1
+    while y<10:
+        if(y==9 and y==x):
+            print(" ", "\t")
+            y+=1
+        elif(y==9 and x!=y):
+            print(x*y, "\t")
+            y+=1
+        elif(x==y):
+            print(" ", "\t", end= " ")
+            y+=1
+        else:
+            print(x*y, "\t", end= " ")
+            y+=1
+    x+=1
+    
+#quiz-4
+import json
+with open("hsinchu.json", mode="r",encoding="utf-8")as file:
+    hsi=json.load(file)
+for i in hsin:
+    if(i["區域別"]=="新竹市" and i["性別"]=="男女合計"):
+        print(i["年月"], "的出生人數", i["出生人數"])
