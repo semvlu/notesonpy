@@ -1,9 +1,11 @@
+#basics
 j= "christmas eve"
 print(j[2:5])
 print(j[3:])
 print(j[:3])   # alphabet is included if its number is written before the colun, excluded if after
 print(j[3:7])
 
+#if elif else
 x= input("x is: ")
 y= input("y is: ")
 if x>y:
@@ -13,6 +15,7 @@ elif x==y:
 else:
     print("y(" + y + ") is the maximum")
 
+#list, seat, set, tuple, dict
 list1 = [55,42,99,36]
 list1 = list1 + [22]
 list1[0] = 11         #list [11,42,99,36,22]
@@ -37,6 +40,7 @@ print(dic["apple"])
 print("apple" in dic)
 del dic["banana"]
 
+#for
 for x in range(2):
     for y in range(7):
         print(y,end="    ") #"end" and the following (" ")means that the output follows the rule with the space or blank in ("  ")
@@ -50,6 +54,7 @@ for i in f:
     print(i) #loop2
 #loop1=loop2
 
+#def
 def recur(n):
     if n<2:
         return n
@@ -63,6 +68,7 @@ a= mult(3,6)
 b= mult(2,8)
 print(a+b)
 
+#lift simulation
 n= int(input("press the button "))
 
 if n%2==1:
@@ -77,6 +83,7 @@ elif n%2==0:
             continue
         print("the floors we got are %d" %(p),end=", ")
         
+#Filehand on os, json, and so forth
 import os
 os.chdir("change to the dir u want")
 import json
@@ -94,38 +101,38 @@ with open("filename.txt", "rb") as ogfile:
         for i in ogfile:
             newfile.write(i)
 
-
-print("B10933001")
+#time
 from datetime import datetime as dt
 print(dt.now())
 
 import os
 os.chdir("fileHand")
-file= open("0330.txt", mode="w", encoding="utf-8")
+file= open("filename.txt", mode="w", encoding="utf-8")
 file.write("test")
 file.close()
 
-with open("0330-1.txt", mode="w", encoding="utf-8") as file:
+with open("filename-1.txt", mode="w", encoding="utf-8") as file:
     file.write("5\n42\n15")
 
 counts=0
-with open("0330-1.txt", mode="r", encoding="utf-8") as file:
+with open("filename-1.txt", mode="r", encoding="utf-8") as file:
     for i in file:
         counts+= int(i)
 print(counts)
 
+#sqlite
 # -*- coding:UTF-8 -*-
 import sqlite3
 conn= sqlite3.connect("filename.db")
 cur= conn.cursor()
 exe= cur.execute
 
-sqlstr="insert into books values('1006', '差異與重複', '1092')" #update "table" set "column to be changed" where "location"
-sqlstr1="update books set name='猿猴、賽伯格和女人：重新發明自然' where id='1003'"
+sqlstr="insert into books values('1006', 'Différence et répétition', '1092')" #update "table" set "column to be changed" where "location"
+sqlstr1="update books set name='Mythologies' where id='1003'"
 sqlstr2="select * from books where sms='1092'" #select * from table 
 sqlstr3="select * from books order by id asc" #order by "column" desc,asc
 sqlstr4="select * from books order by id desc limit 4" #order by "column" desc limit "'record' num"
-sqlstr5="select * from books where name like '%悲劇%' " #where "column" like %str%
+sqlstr5="select * from books where name like '%life%' " #where "column" like %str%
 sqlstr6="delete from bnkrupt where id='1004'" #delete from "table" where "location"
 exe(sqlstr1) 
 books=cur.fetchall()
