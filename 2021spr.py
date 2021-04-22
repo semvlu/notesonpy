@@ -1,3 +1,8 @@
+#built-in funcs
+divmod(x,y) # divmod(57, 6)=(9,3)
+pow(x,y) # pow(2,5)=32
+sorted(seq) # sorted([4,16,42,5])=[4,5,16,42]
+
 #basics
 j= "christmas eve"
 print(j[2:5])
