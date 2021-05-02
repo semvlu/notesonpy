@@ -7,7 +7,7 @@ sorted(seq) # sorted([4,16,42,5])=[4,5,16,42]
 j= "christmas eve"
 print(j[2:5])
 print(j[3:])
-print(j[:3])   # alphabet is included if its number is written before the colun, excluded if after
+print(j[:3])   # alphabet is included if its number is written before the column, excluded if after
 print(j[3:7])
 
 #if elif else
@@ -169,7 +169,7 @@ while x<10:
 #quiz-4
 import json
 with open("hsinchu.json", mode="r",encoding="utf-8")as file:
-    hsi=json.load(file)
+    hsin=json.load(file)
 for i in hsin:
     if(i["區域別"]=="新竹市" and i["性別"]=="男女合計"):
         print(i["年月"], "的出生人數", i["出生人數"])
