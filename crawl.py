@@ -9,4 +9,4 @@ soup=BeautifulSoup(data, 'html.parser') #use BeautifulSoup to parse HTML
 result= soup.select("div.d-img a img")
 for res in result:
     print(res.get("src"))
-#print(soup.prettify())
+print(soup.prettify())
