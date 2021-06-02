@@ -20,7 +20,7 @@ b=np.array([
 ])
 print(b.itemsize)
 print(np.empty([3,2]))
-"""
+
 #3D
 c=np.array([
     [
@@ -32,4 +32,3 @@ c=np.array([
 ])
 print(c.size)
 print(np.empty([4,2,3]))
-"""
