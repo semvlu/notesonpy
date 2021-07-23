@@ -18,7 +18,7 @@ class Event():
         self.urid= id
     def join(self):
         parid=["b10933001","b10933002","b10933003"]
-        if id in parid:
+        if self.urid in parid:
             print("重複報名")
         else:
             print(self.urid + "已報名成功")
